@@ -1,0 +1,44 @@
+    1  cd ~
+    2  echo $SHELL
+    3  sudo cat /etc/passwd
+    4  clear
+    5  pwd
+    6  mkdir logs
+    7  ls
+    8  cd logs
+    9  pwd
+   10  ls
+   11  echo "2026-10-23 08:00:01 INFO System startup completed" > sys_events.log\necho "2026-10-23 08:01:15 INFO user01 logged in successfully" >> sys_events.log\necho "2026-10-23 08:02:30 INFO Network interface eth0 is up" >> sys_events.log\necho "2026-10-23 08:03:45 WARNING Disk usage reached 75 percent" >> sys_events.log\necho "2026-10-23 08:04:12 INFO root executed system update" >> sys_events.log\necho "2026-10-23 08:05:20 ERROR Failed to connect to database" >> sys_events.log\necho "2026-10-23 08:06:33 INFO user01 accessed home directory" >> sys_events.log\necho "2026-10-23 08:07:40 WARNING Multiple failed login attempts detected" >> sys_events.log\necho "2026-10-23 08:08:05 INFO Firewall service started" >> sys_events.log\necho "2026-10-23 08:09:17 ERROR Authentication failure for user01" >> sys_events.log\necho "2026-10-23 08:10:22 INFO root modified system configuration" >> sys_events.log\necho "2026-10-23 08:11:31 WARNING High CPU usage detected" >> sys_events.log\necho "2026-10-23 08:12:46 INFO Backup process initiated" >> sys_events.log\necho "2026-10-23 08:13:59 ERROR Backup process failed" >> sys_events.log\necho "2026-10-23 08:14:18 INFO user01 logged out" >> sys_events.log\necho "2026-10-23 08:15:27 INFO Security scan completed" >> sys_events.log\necho "2026-10-23 08:16:35 WARNING Unauthorized access attempt detected" >> sys_events.log\necho "2026-10-23 08:17:42 INFO root reviewed authentication logs" >> sys_events.log\necho "2026-10-23 08:18:50 ERROR Permission denied while accessing file" >> sys_events.log\necho "2026-10-23 08:19:14 INFO System memory usage normal" >> sys_events.log\necho "2026-10-23 08:20:25 WARNING Disk space running low" >> sys_events.log\necho "2026-10-23 08:21:36 INFO user01 changed password" >> sys_events.log\necho "2026-10-23 08:22:41 ERROR Service failed to restart" >> sys_events.log\necho "2026-10-23 08:23:52 INFO Firewall rules updated by root" >> sys_events.log\necho "2026-10-23 08:24:59 INFO System health check completed" >> sys_events.log
+   12  ls
+   13  cat sys_events.log
+   14  grep "ERROR" sys_events.log
+   15  grep -E "root|user01" sys_event.log
+   16  grep -E "root" sys_event.log
+   17  pwd
+   18  ls
+   19  cat > sys_events.log <<'EOF'\n2026-10-23 08:00:01 INFO System startup completed\n2026-10-23 08:01:15 INFO user01 logged in successfully\n2026-10-23 08:02:30 INFO Network interface eth0 is up\n2026-10-23 08:03:45 WARNING Disk usage reached 75 percent\n2026-10-23 08:04:12 INFO root executed system update\n2026-10-23 08:05:20 ERROR Failed to connect to database\n2026-10-23 08:06:33 INFO user01 accessed home directory\n2026-10-23 08:07:40 WARNING Multiple failed login attempts detected\n2026-10-23 08:08:05 INFO Firewall service started\n2026-10-23 08:09:17 ERROR Authentication failure for user01\n2026-10-23 08:10:22 INFO root modified system configuration\n2026-10-23 08:11:31 WARNING High CPU usage detected\n2026-10-23 08:12:46 INFO Backup process initiated\n2026-10-23 08:13:59 ERROR Backup process failed\n2026-10-23 08:14:18 INFO user01 logged out\n2026-10-23 08:15:27 INFO Security scan completed\n2026-10-23 08:16:35 WARNING Unauthorized access attempt detected\n2026-10-23 08:17:42 INFO root reviewed authentication logs\n2026-10-23 08:18:50 ERROR Permission denied while accessing file\n2026-10-23 08:19:14 INFO System memory usage normal\n2026-10-23 08:20:25 WARNING Disk space running low\n2026-10-23 08:21:36 INFO user01 changed password\n2026-10-23 08:22:41 ERROR Service failed to restart\n2026-10-23 08:23:52 INFO Firewall rules updated by root\n2026-10-23 08:24:59 INFO System health check completed\nEOF
+   20  cat sys_events.log
+   21  grep "ERROR" sys_events.log
+   22  grep -E "root|user01" sys_event.log
+   23  grep "ERROR" sys_events.log | less
+   24  grep -E "root|user01" sys_event.log | less
+   25  grep "ERROR" sys_events.log | less > error_report.txt
+   26  ls
+   27  head -n5 sys_events.logs
+   28  head -n5 sys_events.log
+   29  tail -n5 sys_events.log
+   30  cat sys_events.log
+   31  touch confidential.txt
+   32  ls -l
+   33  chmod g-rw,o-r confidential.txt
+   34  ls -l
+   35  sudo chown root confidential.txt
+   36  ls -l confidential.txt
+   37  whoami
+   38  nano confidential.txt
+   39  sudo useradd guest1
+   40  sudo useradd guest2
+   41  sudo usermod -aG sudo guest1
+   42  sudo userdel -rf guest2
+   43  sudo cat /etc/passwd
+   44  history
